@@ -1,6 +1,8 @@
 # Explainable Grounded Segment Anything
 An image segmentation pipeline that leverages **Grounding DINO** and **Segment Anything Model (SAM)** for text-guided image segmentation. It uses Grounding DINO as the first step to generate bounding boxes around entities in the image based on a user-provided text prompt. These bounding boxes are then passed into the Segment Anything Model (SAM), which performs finer segmentation on the image. Additionally, the pipeline features an explainable interface that uses attention maps to provide insights into the model's decision-making process.
 
+Project Report: [Report](/Creating_a_Visual_Explainable_AI_Interface_with_Grounded_Segment_Anything_Report.pdf)
+
 ![Kids](/images/kids.png)
 ![Diverse](/images/diverse.png)
 
