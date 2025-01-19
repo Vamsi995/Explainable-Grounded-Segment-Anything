@@ -6,6 +6,73 @@ An image segmentation pipeline that leverages **Grounding DINO** and **Segment A
 
 
 
+## Getting Started
+Follow the steps below to run this project locally for development and testing.
+
+### Prerequisites
+Ensure the following libraries and frameworks are installed:
+
+- PyTorch GPU Version
+- GroundingDINO
+- Segment Anything
+
+
+### Installation
+- Clone the repository:
+
+```bash
+git clone https://github.com/Vamsi995/Explainable-Grounded-Segment-Anything.git
+cd Explainable-Grounded-Segment-Anything
+```
+
+- Install Dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+- Grounding DINO Setup
+```bash
+git clone https://github.com/IDEA-Research/GroundingDINO.git
+```
+
+```bash
+git checkout -q 57535c5a79791cb76e36fdb64975271354f10251
+```
+
+```bash
+pip install --upgrade pip setuptools
+pip install build wheel
+```
+
+```bash
+pip install -e .
+```
+
+- Segment Anything Model Setup
+```bash
+pip install 'git+https://github.com/facebookresearch/segment-anything.git'
+```
+
+- Download GroundingDINO & Segment Anything Model Weights
+
+```bash
+cd weights
+!wget -q https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swint_ogc.pth
+!wget -q https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth
+```
+
+### Usage
+
+- Run the driver script:
+
+```bash
+python segment.py
+```
+
+
+
+
+
 
 ## Pipeline Flow
 1. **Grounding DINO**: The first step in the pipeline, where bounding boxes are generated based on the input text prompt. Grounding DINO identifies entities in the image that correspond to the prompt.
